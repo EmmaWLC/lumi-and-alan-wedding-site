@@ -1,5 +1,8 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import { getGuestById } from '../data/guests';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import '../styles/GuestPage.css';
 
 function GuestPage() {
     const { guestId } = useParams();
@@ -12,46 +15,51 @@ function GuestPage() {
 
     return (
         <div className="guest-page">
-            <header className="wedding-header">
-                <h1>Lumi & Alan</h1>
-                <p className="wedding-date">2026年3月28日</p>
-            </header>
+            <Header />
 
-            <main className="guest-content">
-                <div className="welcome-message">
-                    <h2>親愛的 {guest.name}</h2>
-                    <p>誠摯邀請您參加我們的婚禮</p>
+            {/* Hero Section */}
+            <section className="guest-hero">
+                <div className="guest-hero-overlay"></div>
+                <div className="guest-hero-content">
+                    <h1>ALAN & LUMI</h1>
+                    <p className="guest-welcome">Dear {guest.name},</p>
+                    <p className="guest-invitation">
+                        With love and gratitude, we invite you to<br />
+                        join us for an evening at the castle.
+                    </p>
                 </div>
+            </section>
 
-                <section className="wedding-details">
-                    <div className="detail-card">
-                        <h3>📅 日期時間</h3>
-                        <p>2026年3月28日（星期六）</p>
-                        <p>下午 6:00 入場</p>
+            {/* Details Section */}
+            <section className="guest-details">
+                <div className="guest-info-card">
+                    <h2>Your Invitation</h2>
+
+                    <div className="info-item">
+                        <h3>Date & Time</h3>
+                        <p>Saturday, June 27, 2026</p>
+                        <p>Ceremony at 5:00 PM</p>
                     </div>
 
-                    <div className="detail-card">
-                        <h3>📍 宴會地點</h3>
-                        <p>台北喜來登大飯店</p>
-                        <p>台北市中正區忠孝東路一段12號</p>
+                    <div className="info-item">
+                        <h3>Venue</h3>
+                        <p>Thornewood Castle</p>
+                        <p>Lakewood, Washington</p>
                     </div>
 
-                    <div className="detail-card">
-                        <h3>🪑 您的座位</h3>
-                        <p>第 {guest.table} 桌</p>
+                    <div className="info-item">
+                        <h3>Your Table</h3>
+                        <p>Table {guest.table}</p>
                     </div>
-                </section>
 
-                <section className="rsvp-section">
-                    <h3>出席確認</h3>
-                    <p>請於 2026年3月14日 前回覆</p>
-                    {/* 可以在這裡加入 RSVP 表單 */}
-                </section>
-            </main>
+                    <div className="guest-actions">
+                        <Link to="/rsvp" className="guest-rsvp-btn">RSVP</Link>
+                        <Link to="/details" className="guest-details-btn">View Details</Link>
+                    </div>
+                </div>
+            </section>
 
-            <footer className="wedding-footer">
-                <p>期待與您共度美好時光 ❤️</p>
-            </footer>
+            <Footer />
         </div>
     );
 }

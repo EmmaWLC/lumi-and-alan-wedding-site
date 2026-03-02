@@ -1,0 +1,135 @@
+/* Our Story Page Styles */
+.our-story-page {
+    min-height: 100vh;
+    background: #f8f5f0;
+}
+
+.story-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 100px 2rem 4rem;
+}
+
+/* Hero Photo */
+.story-hero {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.polaroid-photo {
+    background: white;
+    padding: 1rem 1rem 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: rotate(-2deg);
+}
+
+.polaroid-photo.large {
+    transform: rotate(1deg);
+}
+
+.polaroid-photo img {
+    width: 300px;
+    height: auto;
+    display: block;
+}
+
+.photo-date {
+    font-family: 'Times New Roman', serif;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin: 1rem 0 0;
+}
+
+.photo-caption {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin: 1rem 0 0;
+}
+
+/* Story Title */
+.story-title {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+/* Article */
+.story-article {
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #444;
+}
+
+.story-article p {
+    margin: 0 0 1.5rem;
+}
+
+.story-highlight {
+    font-style: italic;
+    color: #333;
+}
+
+.story-divider {
+    width: 50px;
+    height: 1px;
+    background: #ccc;
+    margin: 2.5rem auto;
+}
+
+/* Photo Section */
+.story-photo-section {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+/* CTA Button */
+.story-cta {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #c9a86c;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 4rem;
+    font-family: 'Times New Roman', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #b8975b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .story-content {
+        padding: 80px 1.5rem 3rem;
+    }
+
+    .polaroid-photo img {
+        width: 250px;
+    }
+
+    .story-title {
+        font-size: 1.1rem;
+    }
+
+    .story-article {
+        font-size: 0.95rem;
+    }
+}

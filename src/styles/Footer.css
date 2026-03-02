@@ -1,0 +1,37 @@
+/* Footer Styles */
+.site-footer {
+    background-color: #f5f0e8;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-monogram {
+    margin-bottom: 1rem;
+}
+
+.footer-monogram img {
+    height: 50px;
+    width: auto;
+    opacity: 0.8;
+}
+
+.footer-day {
+    font-family: 'Times New Roman', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    color: #333;
+    margin: 0;
+}
+
+.footer-date {
+    font-family: 'Times New Roman', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    color: #333;
+    margin: 0.25rem 0 0 0;
+}
