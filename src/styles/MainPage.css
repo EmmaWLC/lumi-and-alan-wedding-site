@@ -63,11 +63,9 @@
 
 .hero-title {
     font-family: 'Aboreto', sans-serif;
-    font-size: 9rem;
-    /* 144px */
-    font-weight: 100;
-    color: #1a1a1a;
-    letter-spacing: 0.02em;
+    font-size: 42px;
+    font-weight: normal;
+    color: black;
     margin: 0;
     line-height: 117%;
     letter-spacing: -3%;
@@ -312,10 +310,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.hero-title {
-    font-size: 42px;
 }
 
 .invitation-section {

@@ -35,9 +35,9 @@ function Header({ currentPage }) {
                     ))}
                 </nav>
 
-                <button className="mobile-menu-btn">
+                {/* <button className="mobile-menu-btn">
                     MENU
-                </button>
+                </button> */}
             </div>
         </header>
     );
