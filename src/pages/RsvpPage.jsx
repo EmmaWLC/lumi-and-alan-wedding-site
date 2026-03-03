@@ -40,9 +40,9 @@ function RsvpPage() {
 
             {/* Invitation Message */}
             <section className="rsvp-invitation">
-                <p className="invitation-main">We would be honored by your presence.<br />
-                    Kindly respond by March 15, 2026.<br />
-                    For guests traveling from afar, we have reserved a room block at Marriott Tacoma Downtown for your comfort.<br />
+                <p className="invitation-main">We would be honored by your presence.<br /><br />
+                    Kindly respond by March 15, 2026.<br /><br />
+                    For guests traveling from afar, we have reserved a room block at Marriott Tacoma Downtown for your comfort.<br /><br />
                     To ensure availability, we kindly recommend booking your accommodations by March 20, 2026.<br /></p>
             </section>
 
@@ -50,35 +50,42 @@ function RsvpPage() {
             <section className="attire-section">
                 <div className="attire-content">
                     <div className="attire-info">
-                        <h2 className="attire-title">Attire</h2>
+                        <p className="attire-title">Attire</p>
+                        <br />
                         <p className="attire-type">Garden Formal</p>
+                        <br />
                         <p className="attire-description">
-                            We invite you to dress in rich,<br />
-                            earthy tones inspired by the<br />
-                            castle and the surrounding<br />
+                            We invite you to dress in rich,
+                            earthy tones inspired by the
+                            castle and the surrounding
                             landscape.
                         </p>
+                        <br />
                         <p className="attire-colors">
-                            Suggested colors include:<br />
-                            <span className="color-list">Chestnut Brown, Moss Green,<br />
-                                Classic Black, Warm Khaki, and<br />
+                            Suggested colors include:
+                            <span className="color-list">Chestnut Brown, Moss Green,
+                                Classic Black, Warm Khaki, and
                                 Charcoal Gray.</span>
                         </p>
+                        <br />
                         <p className="attire-note">
-                            Suits, gowns, and thoughtfully<br />
-                            tailored silhouettes are<br />
+                            Suits, gowns, and thoughtfully
+                            tailored silhouettes are
                             encouraged.
                         </p>
                     </div>
-                    <div className="attire-images">
-                        <div className="attire-grid">
-                            <img src={getAssetPath('assets/Group 2.png')} alt="Attire inspiration" />
-                            <img src={getAssetPath('assets/Group 3.png')} alt="Attire inspiration" />
-                            <img src={getAssetPath('assets/Group 4.png')} alt="Attire inspiration" />
-                            <img src={getAssetPath('assets/Group 5.png')} alt="Attire inspiration" />
-                            <img src={getAssetPath('assets/Group 6.png')} alt="Attire inspiration" />
-                            <img src={getAssetPath('assets/Group 7.png')} alt="Attire inspiration" />
-                        </div>
+
+                </div>
+                <div className="attire-color-palette">
+                    <div className="attire-color-blocks">
+                        <div className="attire-color-block color1"></div>
+                        <div className="attire-color-block color2"></div>
+                        <div className="attire-color-block color3"></div>
+                        <div className="attire-color-block color4"></div>
+                        <div className="attire-color-block color5"></div>
+                    </div>
+                    <div className="attire-dresscode-img">
+                        <img src={getAssetPath('assets/dressCode.jpg')} alt="Dresscode" />
                     </div>
                 </div>
             </section>
