@@ -21,10 +21,20 @@ function RsvpPage() {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         // Here you would typically send the data to a backend
-        console.log('RSVP submitted:', formData);
+        const formData = new FormData(e.target);
+
+        await fetch("https://formspree.io/f/mzdaneba", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        });
+
+        alert("Submitted!");
         setSubmitted(true);
     };
 
@@ -89,6 +99,7 @@ function RsvpPage() {
                     </div>
                 </div>
             </section>
+            <hr class="divider" />
 
             {/* RSVP Form */}
             <section className="rsvp-form-section">
@@ -112,7 +123,7 @@ function RsvpPage() {
                         </div>
 
                         <div className="form-group">
-                            <label>Will you be joining us? *</label>
+                            <label htmlFor="attending">Will you be joining us? *</label>
                             <div className="radio-group">
                                 <label className="radio-label">
                                     <input
@@ -123,7 +134,7 @@ function RsvpPage() {
                                         onChange={handleChange}
                                         required
                                     />
-                                    <span>With joy</span>
+                                    <span className='form-yes'>With joy</span>
                                 </label>
                                 <label className="radio-label">
                                     <input
@@ -133,7 +144,7 @@ function RsvpPage() {
                                         checked={formData.attending === 'no'}
                                         onChange={handleChange}
                                     />
-                                    <span>Regretfully unable to attend</span>
+                                    <span className='form-no'>Regretfully unable to attend</span>
                                 </label>
                             </div>
                         </div>
