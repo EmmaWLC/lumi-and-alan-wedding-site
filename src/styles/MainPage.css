@@ -211,8 +211,7 @@
 
 /* Our Story Card */
 .our-story-card {
-    min-height: 60vh;
-    height: 60vh;
+    height: 400px;
     background-color: black;
     display: flex;
     flex-direction: column;
