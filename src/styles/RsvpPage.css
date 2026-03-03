@@ -1,13 +1,13 @@
 /* RSVP Page Styles */
 .rsvp-page {
     min-height: 100vh;
-    background: #f8f5f0;
+    background: #fff;
 }
 
 /* Hero Section */
 .rsvp-hero {
     position: relative;
-    height: 50vh;
+    height: 480px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -27,18 +27,20 @@
 .rsvp-hero-title {
     position: relative;
     z-index: 1;
-    font-family: 'Times New Roman', serif;
-    font-size: 2rem;
+    font-family: 'Marcellus', serif;
+    font-size: 40px;
     font-weight: 400;
-    letter-spacing: 0.3em;
+    letter-spacing: 0;
     color: white;
+    line-height: 120%;
 }
 
 /* Invitation Section */
 .rsvp-invitation {
     background: #d4c4a8;
-    padding: 3rem 2rem;
+    padding: 36px 60px;
     text-align: center;
+    margin: 28px;
 }
 
 .invitation-main {
@@ -226,16 +228,5 @@
     .attire-grid {
         grid-template-columns: repeat(3, 1fr);
         max-width: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .rsvp-hero-title {
-        font-size: 1.5rem;
-        letter-spacing: 0.2em;
-    }
-
-    .attire-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }

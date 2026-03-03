@@ -5,9 +5,12 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    height: 73px;
-    background: rgba(68, 66, 62, 0.8);
-    backdrop-filter: blur(10px);
+    height: 57px;
+    background: #EEEEEB;
+}
+
+.logo-desktop {
+    display: none;
 }
 
 .header-content {
@@ -23,18 +26,14 @@
 .header-logo {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 7px;
     text-decoration: none;
     color: #1a1a1a;
 }
 
 .logo-img {
-    width: 66px;
-    height: 66px;
-}
-
-.logo-desktop {
-    display: block;
+    width: 44px;
+    height: 44px;
 }
 
 .logo-mobile {
@@ -63,10 +62,6 @@
     transition: opacity 0.3s;
 }
 
-.header-nav a:hover {
-    opacity: 0.6;
-}
-
 .header-nav .nav-current {
     font-family: 'Geist', sans-serif;
     color: white;
@@ -76,50 +71,17 @@
     opacity: 0.7;
 }
 
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-family: 'Geist', sans-serif;
-    color: white;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    cursor: pointer;
+
+
+.logo-mobile {
+    display: block;
 }
 
-@media (max-width: 800px) {
-    .site-header {
-        height: 57px;
-        background: #EEEEEB;
-    }
+.desktop-nav {
+    display: none;
+}
 
-    .header-logo {
-        gap: 7px;
-    }
 
-    .logo-img {
-        width: 44px;
-        height: 44px;
-    }
-
-    .logo-desktop {
-        display: none;
-    }
-
-    .logo-mobile {
-        display: block;
-    }
-
-    .desktop-nav {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-        color: #1a1a1a;
-    }
-
-    .header-content {
-        padding: 16px 24px;
-    }
+.header-content {
+    padding: 16px 24px;
 }

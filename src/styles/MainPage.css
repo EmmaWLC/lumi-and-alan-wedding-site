@@ -159,10 +159,6 @@
     transition: transform 0.6s ease;
 }
 
-.link-card:hover .card-image {
-    transform: scale(1.05);
-}
-
 .card-overlay {
     position: absolute;
     top: 0;
@@ -204,10 +200,6 @@
     transition: opacity 0.3s;
     line-height: 120%;
     font-size: 24px;
-}
-
-.link-card:hover .card-title {
-    opacity: 0.85;
 }
 
 /* Our Story Card */
@@ -359,9 +351,6 @@
         margin-top: 73px;
     }
 
-    .hero-title {
-        font-size: 3.5rem;
-    }
 
     .invitation-section {
         min-height: 70vh;
@@ -406,9 +395,6 @@
 
 /* min-width: 901px*/
 @media (min-width: 901px) {
-    .hero-title {
-        font-size: 9rem;
-    }
 
     .invitation-section {
         min-height: 80vh;

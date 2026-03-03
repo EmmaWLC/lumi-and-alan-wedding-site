@@ -66,10 +66,6 @@
     transition: all 0.3s;
 }
 
-.venue-rsvp-btn:hover {
-    background: #f5f0e8;
-}
-
 /* Photo Gallery */
 .photo-gallery {
     padding: 0;

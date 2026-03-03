@@ -40,8 +40,10 @@ function RsvpPage() {
 
             {/* Invitation Message */}
             <section className="rsvp-invitation">
-                <p className="invitation-main">We would be honored by your presence.</p>
-                <p className="invitation-deadline">Kindly respond by March 15, 2026.</p>
+                <p className="invitation-main">We would be honored by your presence.<br />
+                    Kindly respond by March 15, 2026.<br />
+                    For guests traveling from afar, we have reserved a room block at Marriott Tacoma Downtown for your comfort.<br />
+                    To ensure availability, we kindly recommend booking your accommodations by March 20, 2026.<br /></p>
             </section>
 
             {/* Attire Section */}

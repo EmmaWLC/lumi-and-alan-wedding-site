@@ -102,10 +102,6 @@
     letter-spacing: 0.1em;
 }
 
-.enter-button:hover {
-    color: #3a2a1a;
-    transform: scale(1.05);
-}
 
 /* Responsive */
 @media (max-width: 600px) {

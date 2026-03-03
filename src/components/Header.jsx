@@ -25,7 +25,7 @@ function Header({ currentPage }) {
                     <span className="header-date">June 27th, 2026</span>
                 </Link>
 
-                <nav className="header-nav desktop-nav">
+                {/* <nav className="header-nav desktop-nav">
                     {navItems.map(item => (
                         isActive(item.path) ? (
                             <span key={item.path} className="nav-current">{item.label}</span>
@@ -33,7 +33,7 @@ function Header({ currentPage }) {
                             <Link key={item.path} to={item.path}>{item.label}</Link>
                         )
                     ))}
-                </nav>
+                </nav> */}
 
                 {/* <button className="mobile-menu-btn">
                     MENU
