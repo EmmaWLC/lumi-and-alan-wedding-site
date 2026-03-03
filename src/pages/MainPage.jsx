@@ -108,9 +108,9 @@ function MainPage() {
                     <h4 className="registry-title">REGISTRY</h4>
                     <div className="registry-text-container">
                         <p className="registry-text">
-                            Your presence is the most cherished gift. Should you wish to honor us further, we have arranged a honeymoon fund for the journey that follows.
+                            Your presence is the most cherished gift. Should you wish to honor us further, we have arranged a honeymoon fund for the journey that follows.<br /><br /><span className="registry-venmo">Venmo: @LumiWei</span>
                         </p>
-                        <p className="registry-venmo">Venmo: @LumiWei</p>
+
                     </div>
                 </div>
             </section>

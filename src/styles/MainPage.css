@@ -51,14 +51,14 @@
 .hero-header {
     background: #ffffff;
     text-align: center;
-    height: 264px;
-    /* 337px total - 73px navbar = 264px */
-    margin-top: 73px;
-    /* navbar height */
+    margin-top: 57px;
+    height: 92px;
+    /* 149px total - 57px header = 92px */
+    margin-top: 57px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
 }
 
 .hero-title {
@@ -103,7 +103,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background:
+        linear-gradient(rgba(174, 140, 114, 0.08), rgba(174, 140, 114, 0.08)),
+        linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20));
 }
 
 .invitation-content {
@@ -198,7 +200,7 @@
     margin: 0;
     letter-spacing: 0;
     text-transform: capitalize;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid #fff;
     transition: opacity 0.3s;
     line-height: 120%;
     font-size: 24px;
@@ -299,17 +301,6 @@
     font-weight: bold;
     margin: 0;
     letter-spacing: -1%;
-}
-
-/* Responsive Styles */
-.hero-header {
-    height: 92px;
-    /* 149px total - 57px header = 92px */
-    margin-top: 57px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .invitation-section {

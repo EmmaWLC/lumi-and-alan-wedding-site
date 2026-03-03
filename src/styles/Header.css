@@ -45,7 +45,7 @@
     font-family: "Cormorant Garamond", serif;
     font-size: 14px;
     letter-spacing: 0.08em;
-    color: white;
+    color: black;
 }
 
 .header-nav {
@@ -121,10 +121,5 @@
 
     .header-content {
         padding: 16px 24px;
-    }
-
-    .header-date {
-        color: #1a1a1a;
-        font-size: 14px;
     }
 }
