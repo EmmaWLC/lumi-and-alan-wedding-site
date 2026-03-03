@@ -7,59 +7,99 @@ import '../styles/MainPage.css';
 function MainPage() {
     return (
         <div className="main-page">
-            <Header />
+            <Header currentPage="main" />
 
-            {/* Hero Section */}
-            <section className="hero-section">
-                <div className="hero-overlay"></div>
-                <div className="hero-content">
-                    <h1 className="hero-title">ALAN & LUMI</h1>
+            {/* Hero Title */}
+            <header className="hero-header">
+                <h1 className="hero-title">Alan & Lumi</h1>
+            </header>
+
+            {/* Invitation Section with Flowers Background */}
+            <main className="invitation-section">
+                <div className="invitation-bg">
+                    <img
+                        src={getAssetPath('assets/hero.jpg')}
+                        alt="Delicate flowers"
+                        className="invitation-bg-image"
+                    />
+                    <div className="invitation-overlay"></div>
                 </div>
-                <div className="hero-image-container">
-                    <img src={getAssetPath('assets/hero.jpg')} alt="Alan and Lumi" className="hero-image" />
-                </div>
-                <div className="hero-info">
-                    <p className="hero-invitation">
-                        With love and gratitude, we invite you to<br />
-                        join us for an evening at the castle.
+                <div className="invitation-content">
+                    <p className="invitation-text">
+                        With love and gratitude, we invite you to join us for an evening at the castle.
                     </p>
-                    <p className="hero-date">Saturday, June 27, 2026</p>
-                    <p className="hero-location">Thornewood Castle,<br />Lakewood, Washington</p>
+                    <p className="invitation-details">
+                        Saturday, June 27, 2026<br />
+                        Thornewood Castle,<br />
+                        Lakewood, Washington
+                    </p>
                 </div>
-            </section>
+            </main>
 
-            {/* Our Story Section */}
-            <section className="section section-dark">
-                <Link to="/our-story" className="section-link">
-                    <h2 className="section-title">OUR STORY</h2>
-                </Link>
-            </section>
+            {/* Our Story Card */}
+            <Link to="/our-story" className="link-card our-story-card">
+                <div className="card-media">
+                    <img
+                        src={getAssetPath('assets/our story1.png')}
+                        alt="Our Story"
+                        className="card-image"
+                    />
+                    <div className="card-overlay"></div>
+                </div>
+                <div className="card-title-container">
+                    <h3 className="card-title">Our story</h3>
+                </div>
+            </Link>
 
-            {/* The Details Section */}
-            <section className="section section-image" style={{ backgroundImage: `url(${getAssetPath('assets/castle.webp')})` }}>
-                <Link to="/details" className="section-link">
-                    <h2 className="section-title">THE DETAILS</h2>
-                </Link>
-            </section>
+            {/* The Details Card */}
+            <Link to="/details" className="link-card details-card">
+                <div className="card-media">
+                    <img
+                        src={getAssetPath('assets/castle.webp')}
+                        alt="Rolling green hills at sunset"
+                        className="card-image"
+                    />
+                    <div className="card-overlay card-overlay-gradient"></div>
+                </div>
+                <div className="card-title-container">
+                    <h3 className="card-title">The details</h3>
+                </div>
+            </Link>
 
-            {/* RSVP Section */}
-            <section className="section section-image" style={{ backgroundImage: `url(${getAssetPath('assets/reception.jpg')})` }}>
-                <Link to="/rsvp" className="section-link">
-                    <h2 className="section-title">RSVP</h2>
-                </Link>
-            </section>
+            {/* RSVP Card */}
+            <Link to="/rsvp" className="link-card rsvp-card">
+                <div className="card-media">
+                    <img
+                        src={getAssetPath('assets/reception.jpg')}
+                        alt="RSVP"
+                        className="card-image"
+                    />
+                    <div className="card-overlay"></div>
+                </div>
+                <div className="card-title-container">
+                    <h3 className="card-title">RSVP</h3>
+                </div>
+            </Link>
 
             {/* Registry Section */}
-            <section className="section section-registry">
-                <h2 className="section-title">REGISTRY</h2>
-                <p className="registry-text">
-                    Your presence is the most cherished gift. Should you wish to<br />
-                    honor us further, we have arranged a honeymoon fund for<br />
-                    the journey that follows.
-                </p>
-                <p className="registry-venmo">
-                    Venmo: <a href="https://venmo.com/LumiWei" target="_blank" rel="noopener noreferrer">@LumiWei</a>
-                </p>
+            <section className="registry-section">
+                <div className="registry-bg">
+                    <img
+                        src={getAssetPath('assets/wine.jpg')}
+                        alt="Flowers in vintage jar"
+                        className="registry-bg-image"
+                    />
+                    <div className="registry-overlay"></div>
+                </div>
+                <div className="registry-content">
+                    <h4 className="registry-title">REGISTRY</h4>
+                    <div className="registry-text-container">
+                        <p className="registry-text">
+                            Your presence is the most cherished gift. Should you wish to honor us further, we have arranged a honeymoon fund for the journey that follows.
+                        </p>
+                        <p className="registry-venmo">Venmo: @LumiWei</p>
+                    </div>
+                </div>
             </section>
 
             <Footer />

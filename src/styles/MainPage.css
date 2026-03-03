@@ -1,113 +1,63 @@
-/* Main Page Styles */
+/* Main Page Styles - Figma Design */
 .main-page {
     min-height: 100vh;
+    background: #ffffff;
+    overflow-x: hidden;
 }
 
-/* Hero Section */
-.hero-section {
-    position: relative;
-    min-height: 100vh;
+/* Hero Header */
+.hero-header {
+    background: #ffffff;
+    text-align: center;
+    height: 264px;
+    /* 337px total - 73px navbar = 264px */
+    margin-top: 73px;
+    /* navbar height */
     display: flex;
-    flex-direction: column;
-    background: #1a1a1a;
-    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
 }
 
-.hero-overlay {
+.hero-title {
+    font-family: 'Aboreto', sans-serif;
+    font-size: 9rem;
+    /* 144px */
+    font-weight: 100;
+    color: #1a1a1a;
+    letter-spacing: 0.02em;
+    margin: 0;
+    line-height: 117%;
+    letter-spacing: -3%;
+}
+
+/* Invitation Section */
+.invitation-section {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.invitation-bg {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 30%);
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding-top: 80px;
-    background: #f5f0e8;
-}
-
-.hero-title {
-    font-family: 'Times New Roman', 'Georgia', serif;
-    font-size: 4rem;
-    font-weight: 400;
-    color: #1a1a1a;
-    letter-spacing: 0.15em;
-    margin: 2rem 0;
-}
-
-.hero-image-container {
-    position: relative;
-    width: 100%;
-    max-height: 60vh;
     overflow: hidden;
 }
 
-.hero-image {
+.invitation-bg-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
 }
 
-.hero-info {
-    background: rgba(0, 0, 0, 0.85);
-    color: white;
-    text-align: center;
-    padding: 3rem 2rem;
-}
-
-.hero-invitation {
-    font-family: 'Times New Roman', serif;
-    font-style: italic;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin: 0 0 1.5rem 0;
-    opacity: 0.9;
-}
-
-.hero-date {
-    font-family: 'Times New Roman', serif;
-    font-style: italic;
-    font-size: 1rem;
-    margin: 0 0 0.5rem 0;
-}
-
-.hero-location {
-    font-family: 'Times New Roman', serif;
-    font-style: italic;
-    font-size: 1rem;
-    margin: 0;
-    line-height: 1.5;
-}
-
-/* Sections */
-.section {
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.section-dark {
-    background: #1a1a1a;
-    color: white;
-}
-
-.section-image {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.section-image::before {
-    content: '';
+.invitation-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -116,89 +66,290 @@
     background: rgba(0, 0, 0, 0.4);
 }
 
-.section-link {
-    text-decoration: none;
-    color: inherit;
+.invitation-content {
     position: relative;
     z-index: 1;
+    text-align: center;
+    color: white;
+    max-width: 600px;
 }
 
-.section-title {
-    font-family: 'Times New Roman', serif;
-    font-size: 1.2rem;
+.invitation-text {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 2rem;
+    /* 32px */
+    line-height: 1.2;
+    margin: 0 0 30px 0;
+    font-weight: 100;
+    width: 279px;
+}
+
+.invitation-details {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 2rem;
+    /* 32px */
+    line-height: 1.2;
+    margin: 0;
     font-weight: 400;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    padding-bottom: 0.5rem;
-    transition: opacity 0.3s;
 }
 
-.section-link:hover .section-title {
-    opacity: 0.7;
+/* Link Cards */
+.link-card {
+    display: block;
+    position: relative;
+    min-height: 400px;
+    text-decoration: none;
+    overflow: hidden;
 }
 
-/* Registry Section */
-.section-registry {
-    background: linear-gradient(135deg, #c9a86c 0%, #a68b4b 100%);
-    color: white;
-    padding: 4rem 2rem;
+.card-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.link-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.35);
+    transition: background 0.3s ease;
+}
+
+.card-overlay-gradient {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.5) 100%);
+}
+
+.link-card:hover .card-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card-title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
     text-align: center;
 }
 
-.section-registry .section-title {
-    margin-bottom: 2rem;
+.card-title {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding-bottom: 8px;
+    transition: opacity 0.3s;
+}
+
+.link-card:hover .card-title {
+    opacity: 0.85;
+}
+
+/* Our Story Card */
+.our-story-card {
+    min-height: 450px;
+}
+
+/* Details Card */
+.details-card {
+    min-height: 350px;
+}
+
+/* RSVP Card */
+.rsvp-card {
+    min-height: 350px;
+}
+
+/* Registry Section */
+.registry-section {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registry-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.registry-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.registry-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(180, 150, 100, 0.85) 0%,
+            rgba(140, 110, 70, 0.9) 100%);
+}
+
+.registry-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 60px 30px;
+    max-width: 500px;
+}
+
+.registry-title {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    margin: 0 0 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.registry-text-container {
+    background: transparent;
 }
 
 .registry-text {
-    font-family: 'Times New Roman', serif;
-    font-size: 1rem;
-    line-height: 1.8;
-    max-width: 500px;
-    margin: 0 auto 1.5rem;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    margin: 0 0 25px 0;
+    opacity: 0.95;
 }
 
 .registry-venmo {
-    font-family: 'Times New Roman', serif;
-    font-size: 1rem;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.05em;
 }
 
-.registry-venmo a {
-    color: white;
-    text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 800px) {
+/* Responsive Styles */
+@media (max-width: 900px) {
     .hero-title {
-        font-size: 2.5rem;
-        letter-spacing: 0.1em;
+        font-size: 3.5rem;
     }
 
-    .hero-invitation {
+    .invitation-section {
+        min-height: 70vh;
+    }
+
+    .invitation-text {
+        font-size: 1.2rem;
+    }
+
+    .link-card {
+        min-height: 300px;
+    }
+
+    .our-story-card {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-header {
+        height: 92px;
+        /* 149px total - 57px header = 92px */
+        margin-top: 57px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .invitation-section {
+        height: 300px;
+        min-height: 300px;
+        padding: 40px 20px;
+    }
+
+    .invitation-text {
+        font-size: 1.125rem;
+        /* 18px */
+        line-height: 1.7;
+    }
+
+    .invitation-details {
         font-size: 1rem;
     }
 
-    .section {
-        min-height: 40vh;
+    .link-card {
+        min-height: 250px;
     }
 
-    .section-title {
-        font-size: 1rem;
+    .our-story-card,
+    .details-card,
+    .rsvp-card {
+        min-height: 280px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .registry-section {
+        min-height: 400px;
+    }
+
+    .registry-content {
+        padding: 40px 20px;
     }
 
     .registry-text {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 42px;
     }
 
-    .hero-info {
-        padding: 2rem 1rem;
+    .invitation-text {
+        font-size: 1.125rem;
+        /* 18px */
+    }
+
+    .card-title {
+        font-size: 1.3rem;
     }
 }

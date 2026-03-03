@@ -8,8 +8,10 @@ function Footer() {
                 <div className="footer-monogram">
                     <img src={getAssetPath('assets/logo.png')} alt="A&L Monogram" />
                 </div>
-                <p className="footer-day">SATURDAY,</p>
-                <p className="footer-date">JUNE 27, 2026</p>
+                <p className="footer-date">
+                    Saturday, <br />
+                    June 27, 2026
+                </p>
             </div>
         </footer>
     );
