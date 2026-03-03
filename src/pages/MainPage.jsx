@@ -36,18 +36,32 @@ function MainPage() {
                 </div>
             </main>
 
+
             {/* Our Story Card */}
             <Link to="/our-story" className="link-card our-story-card">
-                <div className="card-media">
-                    <img
-                        src={getAssetPath('assets/our story1.png')}
-                        alt="Our Story"
-                        className="card-image"
-                    />
-                    <div className="card-overlay"></div>
+                <div
+                    className="card-media card-media-video"
+                >
+                    <iframe
+                        className="card-video-bg"
+                        src="https://www.youtube.com/embed/yR8_5dMqu84?autoplay=1&mute=1&controls=0&loop=1&playlist=yR8_5dMqu84&modestbranding=1&showinfo=0&rel=0"
+                        title="YouTube video player"
+                    ></iframe>
+                    <svg
+                        className="card-video-mask"
+                    >
+                        <defs>
+                            <mask id="mask-hole">
+                                <rect width="100%" height="100%" fill="white" />
+                                <rect x="15" y="15" width="calc(100% - 30px)" height="calc(100% - 30px)" rx="10" fill="black" />
+                            </mask>
+                        </defs>
+                        <rect width="100%" height="100%" fill="black" mask="url(#mask-hole)" />
+                    </svg>
                 </div>
-                <div className="card-title-container">
-                    <h3 className="card-title">Our story</h3>
+
+                <div className="card-title-container" >
+                    <h3 className="card-title">OUR STORY</h3>
                 </div>
             </Link>
 
@@ -55,14 +69,14 @@ function MainPage() {
             <Link to="/details" className="link-card details-card">
                 <div className="card-media">
                     <img
-                        src={getAssetPath('assets/castle.webp')}
-                        alt="Rolling green hills at sunset"
+                        src={getAssetPath('assets/wine.jpg')}
+                        alt="Wine background"
                         className="card-image"
                     />
                     <div className="card-overlay card-overlay-gradient"></div>
                 </div>
                 <div className="card-title-container">
-                    <h3 className="card-title">The details</h3>
+                    <h3 className="card-title">THE DETAILS</h3>
                 </div>
             </Link>
 
@@ -70,8 +84,8 @@ function MainPage() {
             <Link to="/rsvp" className="link-card rsvp-card">
                 <div className="card-media">
                     <img
-                        src={getAssetPath('assets/reception.jpg')}
-                        alt="RSVP"
+                        src={getAssetPath('assets/castle.webp')}
+                        alt="RSVP Castle"
                         className="card-image"
                     />
                     <div className="card-overlay"></div>
@@ -85,14 +99,13 @@ function MainPage() {
             <section className="registry-section">
                 <div className="registry-bg">
                     <img
-                        src={getAssetPath('assets/wine.jpg')}
-                        alt="Flowers in vintage jar"
+                        src={getAssetPath('assets/registry desktop.png')}
+                        alt="Registry Home"
                         className="registry-bg-image"
                     />
-                    <div className="registry-overlay"></div>
                 </div>
                 <div className="registry-content">
-                    <h4 className="registry-title">REGISTRY</h4>
+                    <h3 className="registry-title">REGISTRY</h3>
                     <div className="registry-text-container">
                         <p className="registry-text">
                             Your presence is the most cherished gift. Should you wish to honor us further, we have arranged a honeymoon fund for the journey that follows.
