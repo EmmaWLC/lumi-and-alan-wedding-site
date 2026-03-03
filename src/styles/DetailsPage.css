@@ -204,7 +204,8 @@
     text-align: center;
 }
 
-.registry-title {
+
+.details-registry-title {
     font-family: 'Times New Roman', serif;
     font-size: 1.1rem;
     font-weight: 400;
@@ -213,7 +214,8 @@
     margin: 0 0 2rem;
 }
 
-.registry-text {
+
+.details-registry-text {
     font-family: 'Times New Roman', serif;
     font-size: 0.95rem;
     line-height: 1.8;
@@ -222,13 +224,15 @@
     margin: 0 auto 1rem;
 }
 
-.registry-venmo {
+
+.details-registry-venmo {
     font-family: 'Times New Roman', serif;
     font-size: 0.95rem;
     color: white;
 }
 
-.registry-venmo a {
+
+.details-registry-venmo a {
     color: white;
     text-decoration: underline;
 }

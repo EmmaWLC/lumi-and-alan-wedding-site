@@ -1,36 +1,32 @@
 /* Footer Styles */
 .site-footer {
-    background: linear-gradient(135deg, #8b9a7d 0%, #6b7a5d 100%);
-    padding: 4rem 2rem;
+    background: #E1DBCB;
     text-align: center;
 }
 
 .footer-content {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-}
 
-.footer-monogram {
-    margin-bottom: 0.5rem;
+
 }
 
 .footer-monogram img {
-    height: 60px;
-    width: auto;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
+    width: 142px;
+    height: 142px;
+    margin-top: 44.2px;
 }
 
 .footer-date {
-    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.15em;
-    color: white;
+    font-family: 'Aboreto', 'Times New Roman', serif;
+    font-size: 24px;
+    letter-spacing: -3%;
+    color: black;
     margin: 0;
-    line-height: 1.8;
-    opacity: 0.95;
+    line-height: 110%;
+    margin-top: -17px;
+    margin-bottom: 83.5px;
+    font-weight: normal;
 }

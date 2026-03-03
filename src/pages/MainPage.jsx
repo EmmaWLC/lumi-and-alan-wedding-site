@@ -105,7 +105,7 @@ function MainPage() {
                     />
                 </div>
                 <div className="registry-content">
-                    <h3 className="registry-title">REGISTRY</h3>
+                    <h4 className="registry-title">REGISTRY</h4>
                     <div className="registry-text-container">
                         <p className="registry-text">
                             Your presence is the most cherished gift. Should you wish to honor us further, we have arranged a honeymoon fund for the journey that follows.

@@ -130,13 +130,13 @@ function DetailsPage() {
 
             {/* Registry Section */}
             <section className="details-registry">
-                <h2 className="registry-title">REGISTRY</h2>
-                <p className="registry-text">
+                <h2 className="details-registry-title">REGISTRY</h2>
+                <p className="details-registry-text">
                     Your presence is the most cherished gift. Should you wish to<br />
                     honor us further, we have arranged a honeymoon fund for<br />
                     the journey that follows.
                 </p>
-                <p className="registry-venmo">
+                <p className="details-registry-venmo">
                     Venmo: <a href="https://venmo.com/LumiWei" target="_blank" rel="noopener noreferrer">@LumiWei</a>
                 </p>
             </section>
