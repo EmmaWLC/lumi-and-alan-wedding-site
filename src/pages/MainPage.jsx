@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
-import { getAssetPath } from '../utils/assets';
+import hero from "@/assets/hero.jpg";
+import wine from "@/assets/wine.jpg";
+import castle from "@/assets/castle.webp";
+import registryDesktop from "@/assets/registry-desktop.png";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/MainPage.css';
@@ -18,7 +21,7 @@ function MainPage() {
             <main className="invitation-section">
                 <div className="invitation-bg">
                     <img
-                        src={getAssetPath('assets/hero.jpg')}
+                        src={hero}
                         alt="Delicate flowers"
                         className="invitation-bg-image"
                     />
@@ -69,7 +72,7 @@ function MainPage() {
             <Link to="/details" className="link-card details-card">
                 <div className="card-media">
                     <img
-                        src={getAssetPath('assets/wine.jpg')}
+                        src={wine}
                         alt="Wine background"
                         className="card-image"
                     />
@@ -84,7 +87,7 @@ function MainPage() {
             <Link to="/rsvp" className="link-card rsvp-card">
                 <div className="card-media">
                     <img
-                        src={getAssetPath('assets/castle.webp')}
+                        src={castle}
                         alt="RSVP Castle"
                         className="card-image"
                     />
@@ -99,7 +102,7 @@ function MainPage() {
             <section className="registry-section">
                 <div className="registry-bg">
                     <img
-                        src={getAssetPath('assets/registry desktop.png')}
+                        src={registryDesktop}
                         alt="Registry Home"
                         className="registry-bg-image"
                     />

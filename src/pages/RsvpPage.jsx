@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { getAssetPath } from '../utils/assets';
+import castleImg from "@/assets/castle.webp";
+import dressCode from "@/assets/dress-code.jpg";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/RsvpPage.css';
@@ -43,7 +44,7 @@ function RsvpPage() {
             <Header />
 
             {/* Hero Section */}
-            <section className="rsvp-hero" style={{ backgroundImage: `url(${getAssetPath('assets/castle.webp')})` }}>
+            <section className="rsvp-hero" style={{ backgroundImage: `url(${castleImg})` }}>
                 <div className="rsvp-hero-overlay"></div>
                 <h1 className="rsvp-hero-title">RSVP</h1>
             </section>
@@ -95,7 +96,7 @@ function RsvpPage() {
                         <div className="attire-color-block color5"></div>
                     </div>
                     <div className="attire-dresscode-img">
-                        <img src={getAssetPath('assets/dressCode.jpg')} alt="Dresscode" />
+                        <img src={dressCode} alt="Dresscode" />
                     </div>
                 </div>
             </section>

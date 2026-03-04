@@ -1,4 +1,4 @@
-import { getAssetPath } from '../utils/assets';
+import logo from "@/assets/logo.png";
 import '../styles/Footer.css';
 
 function Footer() {
@@ -6,7 +6,7 @@ function Footer() {
         <footer className="site-footer">
             <div className="footer-content">
                 <div className="footer-monogram">
-                    <img src={getAssetPath('assets/logo.png')} alt="A&L Monogram" />
+                    <img src={logo} alt="A&L Monogram" />
                 </div>
                 <p className="footer-date">
                     Saturday, <br />

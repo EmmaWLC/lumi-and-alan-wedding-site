@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-import { getAssetPath } from '../utils/assets';
+import whiteLogo from "@/assets/white-logo.png";
+import logo from "@/assets/logo.png";
 import '../styles/Header.css';
 
 function Header({ currentPage }) {
@@ -20,8 +21,8 @@ function Header({ currentPage }) {
         <header className="site-header">
             <div className="header-content">
                 <Link to="/main" className="header-logo">
-                    <img src={getAssetPath('assets/white logo.png')} alt="A&L" className="logo-img logo-desktop" />
-                    <img src={getAssetPath('assets/logo.png')} alt="A&L" className="logo-img logo-mobile" />
+                    <img src={whiteLogo} alt="A&L" className="logo-img logo-desktop" />
+                    <img src={logo} alt="A&L" className="logo-img logo-mobile" />
                     <span className="header-date">June 27th, 2026</span>
                 </Link>
 

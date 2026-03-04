@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { getAssetPath } from '../utils/assets';
+import ourStory1 from "@/assets/our-story1.png";
+import ourStory2 from "@/assets/our-story2.png";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/OurStoryPage.css';
@@ -13,7 +14,7 @@ function OurStoryPage() {
                 {/* Hero Photo */}
                 <section className="story-hero">
                     <div className="polaroid-photo">
-                        <img src={getAssetPath('assets/our story1.png')} alt="Our first photo together" />
+                        <img src={ourStory1} alt="Our first photo together" />
                         <p className="photo-date">01/10/2020</p>
                     </div>
                 </section>
@@ -78,7 +79,7 @@ function OurStoryPage() {
                 {/* Second Photo */}
                 <section className="story-photo-section">
                     <div className="polaroid-photo large">
-                        <img src={getAssetPath('assets/our story2.png')} alt="Disney Cruise" />
+                        <img src={ourStory2} alt="Disney Cruise" />
                         <p className="photo-caption">Disney Cruise</p>
                     </div>
                 </section>

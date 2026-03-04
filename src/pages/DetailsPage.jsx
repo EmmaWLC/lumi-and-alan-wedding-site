@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
-import { getAssetPath } from '../utils/assets';
+import date from "@/assets/date.jpg";
+import wine from "@/assets/wine.jpg";
+import reception from "@/assets/reception.jpg";
+import travelStayBg from "@/assets/travel-and-stay.jpeg";
+import hotel from "@/assets/hotel.jpg";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/DetailsPage.css';
@@ -37,13 +41,13 @@ function DetailsPage() {
             <section className="photo-gallery">
                 <div className="gallery-grid">
                     <div className="gallery-item">
-                        <img src={getAssetPath('assets/date.jpg')} alt="Wedding venue" />
+                        <img src={date} alt="Wedding venue" />
                     </div>
                     <div className="gallery-item">
-                        <img src={getAssetPath('assets/wine.jpg')} alt="Wine celebration" />
+                        <img src={wine} alt="Wine celebration" />
                     </div>
                     <div className="gallery-item">
-                        <img src={getAssetPath('assets/reception.jpg')} alt="Reception" />
+                        <img src={reception} alt="Reception" />
                     </div>
                 </div>
             </section>
@@ -80,7 +84,7 @@ function DetailsPage() {
 
             {/* Travel & Stay */}
             <section className="travel-section">
-                <div className="travel-hero" style={{ backgroundImage: `url(${getAssetPath('assets/travel and stay bg.jpeg')})` }}>
+                <div className="travel-hero" style={{ backgroundImage: `url(${travelStayBg})` }}>
                     <h2 className="travel-title">TRAVEL & STAY</h2>
                 </div>
 
@@ -124,7 +128,7 @@ function DetailsPage() {
                 </div>
 
                 <div className="hotel-image">
-                    <img src={getAssetPath('assets/hotel.jpg')} alt="Marriott Tacoma Downtown" />
+                    <img src={hotel} alt="Marriott Tacoma Downtown" />
                 </div>
             </section>
 

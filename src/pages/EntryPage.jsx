@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { getAssetPath } from '../utils/assets';
+import logo from "@/assets/logo.png";
 import '../styles/EntryPage.css';
 
 function EntryPage() {
@@ -19,7 +19,7 @@ function EntryPage() {
                         <p className="poem-line">An evening where stories quietly begin.</p>
 
                         <div className="swan-ornament">
-                            <img src={getAssetPath('assets/logo.png')} alt="Swans" />
+                            <img src={logo} alt="Swans" />
                         </div>
 
                         <button className="enter-button" onClick={handleEnter}>
