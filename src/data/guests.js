@@ -79,6 +79,6 @@ export const getGuestById = (guestId) => {
 export const getAllGuestUrls = (baseUrl = '') => {
     return guests.map(guest => ({
         name: guest.name,
-        url: `${baseUrl}/guest/${guest.id}`
+        url: `${baseUrl}/?guestId=${guest.id}`
     }));
 };

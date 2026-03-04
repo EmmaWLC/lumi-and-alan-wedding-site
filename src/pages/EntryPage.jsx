@@ -1,12 +1,14 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import logo from "@/assets/logo.png";
 import '../styles/EntryPage.css';
 
 function EntryPage() {
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleEnter = () => {
-        navigate('/main');
+        console.log('Current search params:', location.search);
+        navigate(`/main${location.search}`);
     };
 
     return (

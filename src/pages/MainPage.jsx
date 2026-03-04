@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import hero from "@/assets/hero.jpg";
 import wine from "@/assets/wine.jpg";
 import castle from "@/assets/castle.webp";
@@ -8,6 +8,10 @@ import Footer from '../components/Footer';
 import '../styles/MainPage.css';
 
 function MainPage() {
+    const [searchParams] = useSearchParams();
+    const guestId = searchParams.get('guestId');
+    const guestQuery = guestId ? `?guestId=${guestId}` : '';
+
     return (
         <div className="main-page">
             <Header currentPage="main" />
@@ -41,7 +45,7 @@ function MainPage() {
 
 
             {/* Our Story Card */}
-            <Link to="/our-story" className="link-card our-story-card">
+            <Link to={`/our-story${guestQuery}`} className="link-card our-story-card">
                 <div
                     className="card-media card-media-video"
                 >
@@ -69,7 +73,7 @@ function MainPage() {
             </Link>
 
             {/* The Details Card */}
-            <Link to="/details" className="link-card details-card">
+            <Link to={`/details${guestQuery}`} className="link-card details-card">
                 <div className="card-media">
                     <img
                         src={wine}
@@ -84,7 +88,7 @@ function MainPage() {
             </Link>
 
             {/* RSVP Card */}
-            <Link to="/rsvp" className="link-card rsvp-card">
+            <Link to={`/rsvp${guestQuery}`} className="link-card rsvp-card">
                 <div className="card-media">
                     <img
                         src={castle}
