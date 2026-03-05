@@ -44,18 +44,19 @@ function RsvpPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Here you would typically send the data to a backend
-        const formData = new FormData(e.target);
+        const data = new FormData(e.target);
+        data.append("access_key", "6fb82a4f-279a-438a-9cb1-6e2ca0fa6160");
+        if (guestId) data.append("guestId", guestId);
 
-        await fetch("https://formspree.io/f/mzdaneba", {
+        const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json",
-            },
+            body: data,
         });
 
-        setSubmitted(true);
+        const result = await response.json();
+        if (result.success) {
+            setSubmitted(true);
+        }
     };
 
     return (
