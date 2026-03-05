@@ -286,3 +286,118 @@ label[for="dietary"] {
     font-size: 1rem;
     color: #666;
 }
+
+
+@media (min-width: 768px) {
+
+    .rsvp-invitation {
+        background: #E1DBCB;
+        padding: 120px 96px;
+        text-align: center;
+        margin: 48px;
+        border-radius: 10px;
+        font-size: 28px;
+    }
+
+    .invitation-main {
+        font-size: 28px;
+    }
+
+    .attire-title {
+        font-size: 28px;
+    }
+
+    .attire-content {
+        font-size: 24px;
+        padding: 48px 24px;
+        margin: 0;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .attire-section {
+        display: grid;
+        grid-template-columns: 327fr 50fr 327fr;
+        margin: 0 48px 69px;
+        gap: 6px;
+    }
+
+    .attire-dresscode-img {
+        margin: 0;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .attire-dresscode-img img {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    .attire-type,
+    .attire-description,
+    .attire-colors,
+    .attire-note {
+        font-size: 24px;
+    }
+
+    /* Attire Color Blocks Section */
+    .attire-color-blocks {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        gap: 6px;
+        margin: 0;
+    }
+
+    .attire-color-block {
+        flex: 1;
+        width: 100%;
+    }
+
+    .attire-content {
+        flex: 327;
+    }
+
+    .attire-color-palette {
+        flex: 50;
+    }
+
+    .attire-dresscode-img {
+        flex: 327;
+    }
+
+    .rsvp-form-section {
+        padding: 48px;
+    }
+
+    .rsvp-form {
+        margin: 0;
+        max-width: none;
+        ;
+    }
+
+    label[for="name"],
+    label[for="attending"],
+    label[for="dietary"] {
+        font-size: 24px;
+    }
+
+    .form-yes,
+    .form-no {
+        font-size: 24px;
+    }
+
+    .submit-btn {
+        width: 511px;
+        font-size: 16px;
+    }
+
+    .form-group input[type="text"] {
+
+        font-size: 20px;
+    }
+
+
+}

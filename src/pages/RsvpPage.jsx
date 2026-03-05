@@ -107,9 +107,9 @@ function RsvpPage() {
                         <div className="attire-color-block color4"></div>
                         <div className="attire-color-block color5"></div>
                     </div>
-                    <div className="attire-dresscode-img">
-                        <img src={dressCode} alt="Dresscode" />
-                    </div>
+                </div>
+                <div className="attire-dresscode-img">
+                    <img src={dressCode} alt="Dresscode" />
                 </div>
             </section>
             <hr class="divider" />
