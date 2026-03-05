@@ -85,7 +85,7 @@ function RsvpPage() {
                         </p>
                         <br />
                         <p className="attire-colors">
-                            Suggested colors include:&nbsp;&nbsp;
+                            Suggested colors include:&nbsp;
                             <span className="color-list">Chestnut Brown, Moss Green,
                                 Classic Black, Warm Khaki, and
                                 Charcoal Gray.</span>
