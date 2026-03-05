@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { getGuestById } from '../data/guests';
 import castleImg from "@/assets/castle.webp";
 import dressCode from "@/assets/dress-code.jpg";
@@ -60,13 +60,15 @@ function RsvpPage() {
             <section className="rsvp-invitation">
                 {isLocal ? (
                     <p className="invitation-main">We would be honored by your presence.<br /><br />
-                        Kindly respond by March 15, 2026.</p>
+                        Please RSVP by March 20, 2026.</p>
                 ) : (
                     <p className="invitation-main">We would be honored by your presence.<br /><br />
-                        Kindly respond by March 15, 2026.<br /><br />
-                        For guests traveling from afar, we have reserved a room block at Marriott Tacoma Downtown for your comfort.<br /><br />
-                        To ensure availability, we kindly recommend booking your accommodations by March 20, 2026.<br /></p>
+                        Please RSVP by March 20, 2026.<br /><br />
+                        For guests traveling from afar, a room block is reserved at Marriott Tacoma Downtown.<br /><br />
+                        To ensure availability, we kindly recommend booking your accommodations by the end of March.<br /></p>
                 )}
+
+                <Link to="/rsvp-form" className="book-a-room">BOOK A ROOM</Link>
             </section>
 
             {/* Attire Section */}
