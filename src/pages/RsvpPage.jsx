@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { getGuestById } from '../data/guests';
 import castleImg from "@/assets/castle.webp";
 import dressCode from "@/assets/dress-code.jpg";
+import cardBack from "@/assets/card-back.jpg";
 import group1 from "@/assets/Group-1.png";
 import group2 from "@/assets/Group-2.png";
 import group3 from "@/assets/Group-3.png";
@@ -31,6 +32,7 @@ function RsvpPage() {
     });
 
     const [submitted, setSubmitted] = useState(false);
+    const [spinKey, setSpinKey] = useState(0);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -140,11 +142,16 @@ function RsvpPage() {
                             <h3>Thank you for your response!</h3>
                             <p>We look forward to celebrating with you.</p>
                             {guest?.table && groupPhotos[guest.table] && (
-                                <img
-                                    src={groupPhotos[guest.table]}
-                                    alt={`Table ${guest.table} group`}
-                                    className="rsvp-success-group-photo"
-                                />
+                                <div className="card-flip-container" onClick={() => setSpinKey(k => k + 1)}>
+                                    <div className="card-flip-inner" key={spinKey}>
+                                        <div className="card-flip-back">
+                                            <img src={cardBack} alt="Card back" />
+                                        </div>
+                                        <div className="card-flip-front">
+                                            <img src={groupPhotos[guest.table]} alt={`Table ${guest.table} group`} />
+                                        </div>
+                                    </div>
+                                </div>
                             )}
                         </div>
                     ) : (
