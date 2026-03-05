@@ -45,7 +45,7 @@ function MainPage() {
 
 
             {/* Our Story Card */}
-            <Link to={`/our-story${guestQuery}`} className="link-card our-story-card">
+            <Link to="https://gothic-mold-31003876.figma.site/our-story" className="link-card our-story-card">
                 <div
                     className="card-media card-media-video"
                 >
@@ -73,7 +73,7 @@ function MainPage() {
             </Link>
 
             {/* The Details Card */}
-            <Link to={`/details${guestQuery}`} className="link-card details-card">
+            <Link to="https://gothic-mold-31003876.figma.site/details" className="link-card details-card">
                 <div className="card-media">
                     <img
                         src={wine}
