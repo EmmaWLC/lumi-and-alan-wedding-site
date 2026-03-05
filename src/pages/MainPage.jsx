@@ -5,6 +5,7 @@ import castle from "@/assets/castle.webp";
 import registryDesktop from "@/assets/registry-desktop.png";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import FadeIn from '../components/FadeIn';
 import '../styles/MainPage.css';
 
 function MainPage() {
@@ -22,6 +23,7 @@ function MainPage() {
             </header>
 
             {/* Invitation Section with Flowers Background */}
+            <FadeIn>
             <main className="invitation-section">
                 <div className="invitation-bg">
                     <img
@@ -42,9 +44,10 @@ function MainPage() {
                     </p>
                 </div>
             </main>
-
+            </FadeIn>
 
             {/* Our Story Card */}
+            <FadeIn>
             <Link to="https://gothic-mold-31003876.figma.site/our-story" className="link-card our-story-card">
                 <div
                     className="card-media card-media-video"
@@ -71,8 +74,10 @@ function MainPage() {
                     <h3 className="card-title">OUR STORY</h3>
                 </div>
             </Link>
+            </FadeIn>
 
             {/* The Details Card */}
+            <FadeIn>
             <Link to="https://gothic-mold-31003876.figma.site/details" className="link-card details-card">
                 <div className="card-media">
                     <img
@@ -86,8 +91,10 @@ function MainPage() {
                     <h3 className="card-title">THE DETAILS</h3>
                 </div>
             </Link>
+            </FadeIn>
 
             {/* RSVP Card */}
+            <FadeIn>
             <Link to={`/rsvp${guestQuery}`} className="link-card rsvp-card">
                 <div className="card-media">
                     <img
@@ -101,8 +108,10 @@ function MainPage() {
                     <h3 className="card-title">RSVP</h3>
                 </div>
             </Link>
+            </FadeIn>
 
             {/* Registry Section */}
+            <FadeIn>
             <section className="registry-section">
                 <div className="registry-bg">
                     <img
@@ -121,6 +130,7 @@ function MainPage() {
                     </div>
                 </div>
             </section>
+            </FadeIn>
 
             <Footer />
         </div>
