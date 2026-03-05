@@ -20,10 +20,6 @@ function EntryPage() {
                         <p className="poem-line">A castle by the lake.</p>
                         <p className="poem-line">An evening where stories quietly begin.</p>
 
-                        <div className="swan-ornament">
-                            <img src={logo} alt="Swans" />
-                        </div>
-
                         <button className="enter-button" onClick={handleEnter}>
                             Enter
                         </button>
