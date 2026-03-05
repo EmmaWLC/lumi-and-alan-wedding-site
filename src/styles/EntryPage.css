@@ -1,5 +1,6 @@
 /* Entry Page */
 .entry-page {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -7,63 +8,47 @@
     background-image: url('../assets/letter.jpg');
     background-size: cover;
     background-position: center;
-    padding: 2rem;
 }
 
-.parchment {
-    max-width: 500px;
-    width: 100%;
-}
-
-.parchment::before {
-    display: none;
-}
-
-.parchment-border {
-    border: none;
-    margin: 20px;
-    padding: 60px 40px;
-    position: relative;
-}
-
-.parchment-border::before,
-.parchment-border::after {
-    display: none;
-}
-
-.parchment-content {
+/* Poem lines — absolutely positioned between the two decorative lines */
+.poem-lines {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    position: relative;
-    z-index: 1;
+    width: 100%;
+    padding: 0 2rem;
+    pointer-events: none;
 }
 
 /* Handwriting text — reveal left-to-right */
 .poem-line {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.7rem;
-    color: #3a2618;
+    font-size: 1.2rem;
+    color: #5c4135;
     margin: 0.6rem 0;
-    line-height: 1.7;
+    line-height: 1.2;
     letter-spacing: 0.01em;
     clip-path: inset(0 100% 0 0);
     animation: write-line linear forwards;
     animation-fill-mode: both;
 }
 
-/* Line 1: "A midsummer gathering." — 22 chars */
-.parchment-content p:nth-of-type(1) {
+/* Line 1: "A midsummer gathering." */
+.poem-lines p:nth-of-type(1) {
     animation-delay: 0.8s;
     animation-duration: 1.5s;
 }
 
-/* Line 2: "A castle by the lake." — 21 chars */
-.parchment-content p:nth-of-type(2) {
+/* Line 2: "A castle by the lake." */
+.poem-lines p:nth-of-type(2) {
     animation-delay: 2.6s;
     animation-duration: 1.4s;
 }
 
-/* Line 3: "An evening where stories quietly begin." — 39 chars */
-.parchment-content p:nth-of-type(3) {
+/* Line 3: "An evening where stories quietly begin." */
+.poem-lines p:nth-of-type(3) {
     animation-delay: 4.3s;
     animation-duration: 2.6s;
 }
@@ -78,25 +63,11 @@
     }
 }
 
-/* Swan and button appear after all lines finish (~7.2s) */
-.swan-ornament {
-    margin: 3rem 0;
-    opacity: 0;
-    animation: fade-in-entry 1.2s ease forwards;
-    animation-delay: 7.4s;
-    animation-fill-mode: both;
-}
-
-.swan-ornament img {
-    width: 80px;
-    height: auto;
-    opacity: 0.7;
-}
-
+/* Enter button — stays at flex center (unchanged) */
 .enter-button {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.4rem;
-    color: #3a2618;
+    font-size: 1.5rem;
+    color: #5c4135;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -107,6 +78,10 @@
     animation-delay: 7.8s;
     animation-fill-mode: both;
     transition: opacity 0.2s ease;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .enter-button:hover {
@@ -123,26 +98,13 @@
     }
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    .entry-page {
-        padding: 1rem;
-    }
-
-    .parchment-border {
-        margin: 15px;
-        padding: 40px 25px;
-    }
-
+@media (min-width: 768px) {
     .poem-line {
-        font-size: 1.35rem;
-    }
-
-    .swan-ornament img {
-        width: 60px;
+        font-size: 2rem;
     }
 
     .enter-button {
-        font-size: 1.2rem;
+        font-size: 2.5rem;
     }
+
 }
