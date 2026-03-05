@@ -7,18 +7,7 @@ function FadeIn({ children, delay = 0, className = '' }) {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setVisible(true);
-                } else {
-                    // 只有元素從底部離開視窗（尚未看過）才 fade out
-                    // 從頂部離開（已看過）則保持可見
-                    const exitedFromBottom = entry.rootBounds
-                        ? entry.boundingClientRect.top > entry.rootBounds.bottom
-                        : entry.boundingClientRect.top > window.innerHeight;
-                    if (exitedFromBottom) {
-                        setVisible(false);
-                    }
-                }
+                setVisible(entry.isIntersecting);
             },
             { threshold: 0.1 }
         );
