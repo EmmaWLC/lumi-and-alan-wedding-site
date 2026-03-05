@@ -181,10 +181,23 @@
     background: rgba(0, 0, 0, 0.5);
 }
 
-.card-title-container {
+.card-title-container,
+.registry-content,
+.invitation-content,
+.hero-title {
     position: relative;
     z-index: 2;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.fade-in-section.is-visible .card-title-container,
+.fade-in-section.is-visible .registry-content,
+.fade-in-section.is-visible .invitation-content,
+.fade-in-section.is-visible .hero-title {
+    opacity: 1;
+    transition-delay: 0.7s;
 }
 
 .card-title {

@@ -18,9 +18,11 @@ function MainPage() {
             <Header currentPage="main" />
 
             {/* Hero Title */}
+            <FadeIn>
             <header className="hero-header">
                 <h1 className="hero-title">Alan & Lumi</h1>
             </header>
+            </FadeIn>
 
             {/* Invitation Section with Flowers Background */}
             <FadeIn>
