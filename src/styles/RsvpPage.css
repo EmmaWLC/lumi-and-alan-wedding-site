@@ -287,6 +287,9 @@ label[for="dietary"] {
 
 /* Success Message */
 .rsvp-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 3rem;
 }
@@ -377,7 +380,7 @@ label[for="dietary"] {
 .card-magic-wrapper {
     position: relative;
     width: 240px;
-    margin: 2rem auto 0;
+    margin-top: 48px;
 }
 
 .sparkle {
@@ -412,23 +415,97 @@ label[for="dietary"] {
 }
 
 @keyframes sparkle-twinkle {
-    0%   { opacity: 0;   transform: scale(0.4) rotate(0deg); }
-    30%  { opacity: 1;   transform: scale(1.1) rotate(45deg); }
-    60%  { opacity: 0.6; transform: scale(0.8) rotate(90deg); }
-    100% { opacity: 0;   transform: scale(0.3) rotate(180deg); }
+    0% {
+        opacity: 0;
+        transform: scale(0.4) rotate(0deg);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.1) rotate(45deg);
+    }
+
+    60% {
+        opacity: 0.6;
+        transform: scale(0.8) rotate(90deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.3) rotate(180deg);
+    }
 }
 
 /* Sparkle positions — scattered around the card */
-.sparkle-1  { top: -18px; left: -14px;  animation-delay: 0s;    animation-duration: 2.1s; }
-.sparkle-2  { top: -22px; left: 110px;  animation-delay: 0.4s;  animation-duration: 1.8s; }
-.sparkle-3  { top: -12px; left: 244px;  animation-delay: 0.8s;  animation-duration: 2.3s; }
-.sparkle-4  { top:  50px; left: 254px;  animation-delay: 0.2s;  animation-duration: 1.9s; }
-.sparkle-5  { top: 160px; left: 258px;  animation-delay: 1.1s;  animation-duration: 2.0s; }
-.sparkle-6  { top: 280px; left: 250px;  animation-delay: 0.6s;  animation-duration: 2.4s; }
-.sparkle-7  { top: 344px; left: 190px;  animation-delay: 1.3s;  animation-duration: 1.7s; }
-.sparkle-8  { top: 348px; left:  20px;  animation-delay: 0.9s;  animation-duration: 2.2s; }
-.sparkle-9  { top: 160px; left: -18px;  animation-delay: 1.5s;  animation-duration: 1.9s; }
-.sparkle-10 { top:  70px; left: -16px;  animation-delay: 0.3s;  animation-duration: 2.1s; }
+.sparkle-1 {
+    top: -18px;
+    left: -14px;
+    animation-delay: 0s;
+    animation-duration: 2.1s;
+}
+
+.sparkle-2 {
+    top: -22px;
+    left: 110px;
+    animation-delay: 0.4s;
+    animation-duration: 1.8s;
+}
+
+.sparkle-3 {
+    top: -12px;
+    left: 244px;
+    animation-delay: 0.8s;
+    animation-duration: 2.3s;
+}
+
+.sparkle-4 {
+    top: 50px;
+    left: 254px;
+    animation-delay: 0.2s;
+    animation-duration: 1.9s;
+}
+
+.sparkle-5 {
+    top: 160px;
+    left: 258px;
+    animation-delay: 1.1s;
+    animation-duration: 2.0s;
+}
+
+.sparkle-6 {
+    top: 280px;
+    left: 250px;
+    animation-delay: 0.6s;
+    animation-duration: 2.4s;
+}
+
+.sparkle-7 {
+    top: 344px;
+    left: 190px;
+    animation-delay: 1.3s;
+    animation-duration: 1.7s;
+}
+
+.sparkle-8 {
+    top: 348px;
+    left: 20px;
+    animation-delay: 0.9s;
+    animation-duration: 2.2s;
+}
+
+.sparkle-9 {
+    top: 160px;
+    left: -18px;
+    animation-delay: 1.5s;
+    animation-duration: 1.9s;
+}
+
+.sparkle-10 {
+    top: 70px;
+    left: -16px;
+    animation-delay: 0.3s;
+    animation-duration: 2.1s;
+}
 
 
 @media (min-width: 768px) {
