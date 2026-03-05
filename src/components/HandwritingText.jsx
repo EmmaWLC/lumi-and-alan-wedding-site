@@ -6,8 +6,8 @@ const LINES = [
     'An evening where stories quietly begin.',
 ];
 
-const FONT_SIZE = 72;
-const LINE_SPACING = FONT_SIZE * 1.8;
+const FONT_SIZE = 48;
+const LINE_SPACING = FONT_SIZE * 1.6;
 const SVG_WIDTH = 900;
 const CHARS_PER_SEC = 12;
 const START_DELAY = 0.5;
@@ -54,7 +54,7 @@ function HandwritingText() {
         return { dur, delay };
     });
 
-    const totalHeight = LINES.length * LINE_SPACING + FONT_SIZE * 0.4;
+    const totalHeight = LINES.length * LINE_SPACING + FONT_SIZE * 0.5;
 
     if (!lineData) return null;
 
