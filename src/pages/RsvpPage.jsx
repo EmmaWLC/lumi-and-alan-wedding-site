@@ -3,10 +3,20 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { getGuestById } from '../data/guests';
 import castleImg from "@/assets/castle.webp";
 import dressCode from "@/assets/dress-code.jpg";
+import group1 from "@/assets/Group-1.png";
+import group2 from "@/assets/Group-2.png";
+import group3 from "@/assets/Group-3.png";
+import group4 from "@/assets/Group-4.png";
+import group5 from "@/assets/Group-5.png";
+import group6 from "@/assets/Group-6.png";
+import group7 from "@/assets/Group-7.png";
+import group8 from "@/assets/Group-8.png";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FadeIn from '../components/FadeIn';
 import '../styles/RsvpPage.css';
+
+const groupPhotos = { 1: group1, 2: group2, 3: group3, 4: group4, 5: group5, 6: group6, 7: group7, 8: group8 };
 
 function RsvpPage() {
     const [searchParams] = useSearchParams();
@@ -43,7 +53,6 @@ function RsvpPage() {
             },
         });
 
-        alert("Submitted!");
         setSubmitted(true);
     };
 
@@ -130,6 +139,13 @@ function RsvpPage() {
                         <div className="rsvp-success">
                             <h3>Thank you for your response!</h3>
                             <p>We look forward to celebrating with you.</p>
+                            {guest?.table && groupPhotos[guest.table] && (
+                                <img
+                                    src={groupPhotos[guest.table]}
+                                    alt={`Table ${guest.table} group`}
+                                    className="rsvp-success-group-photo"
+                                />
+                            )}
                         </div>
                     ) : (
                         <form className="rsvp-form" onSubmit={handleSubmit}>

@@ -292,16 +292,30 @@ label[for="dietary"] {
 }
 
 .rsvp-success h3 {
-    font-family: 'Times New Roman', serif;
-    font-size: 1.3rem;
-    color: #333;
-    margin: 0 0 1rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -1%;
+    line-height: 120%;
+    color: #4D4D4D;
 }
 
 .rsvp-success p {
-    font-family: 'Times New Roman', serif;
-    font-size: 1rem;
-    color: #666;
+    font-family: 'EB Garamond', serif;
+    font-size: 14px;
+    letter-spacing: -1%;
+    line-height: 120%;
+    color: #4d4d4d;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.rsvp-success-group-photo {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto 0;
+    border-radius: 10px;
 }
 
 
