@@ -183,8 +183,7 @@
 
 .card-title-container,
 .registry-content,
-.invitation-content,
-.hero-title {
+.invitation-content {
     position: relative;
     z-index: 2;
     text-align: center;
@@ -194,8 +193,7 @@
 
 .fade-in-section.is-visible .card-title-container,
 .fade-in-section.is-visible .registry-content,
-.fade-in-section.is-visible .invitation-content,
-.fade-in-section.is-visible .hero-title {
+.fade-in-section.is-visible .invitation-content {
     opacity: 1;
     transition-delay: 0.7s;
 }
