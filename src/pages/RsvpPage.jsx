@@ -142,13 +142,18 @@ function RsvpPage() {
                             <h3>Thank you for your response!</h3>
                             <p>We look forward to celebrating with you.</p>
                             {guest?.table && groupPhotos[guest.table] && (
-                                <div className="card-flip-container" onClick={() => setSpinKey(k => k + 1)}>
-                                    <div className="card-flip-inner" key={spinKey}>
-                                        <div className="card-flip-back">
-                                            <img src={cardBack} alt="Card back" />
-                                        </div>
-                                        <div className="card-flip-front">
-                                            <img src={groupPhotos[guest.table]} alt={`Table ${guest.table} group`} />
+                                <div className="card-magic-wrapper">
+                                    {[...Array(10)].map((_, i) => (
+                                        <div key={i} className={`sparkle sparkle-${i + 1}`} />
+                                    ))}
+                                    <div className="card-flip-container" onClick={() => setSpinKey(k => k + 1)}>
+                                        <div className="card-flip-inner" key={spinKey}>
+                                            <div className="card-flip-back">
+                                                <img src={cardBack} alt="Card back" />
+                                            </div>
+                                            <div className="card-flip-front">
+                                                <img src={groupPhotos[guest.table]} alt={`Table ${guest.table} group`} />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
