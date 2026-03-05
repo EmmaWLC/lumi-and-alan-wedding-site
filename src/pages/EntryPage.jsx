@@ -1,4 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom';
+import letterImg from '@/assets/letter.jpg';
+import HandwritingText from '../components/HandwritingText';
 import '../styles/EntryPage.css';
 
 function EntryPage() {
@@ -6,17 +8,13 @@ function EntryPage() {
     const location = useLocation();
 
     const handleEnter = () => {
-        console.log('Current search params:', location.search);
         navigate(`/main${location.search}`);
     };
 
     return (
         <div className="entry-page">
-            <div className="poem-lines">
-                <p className="poem-line">A midsummer gathering.</p>
-                <p className="poem-line">A castle by the lake.</p>
-                <p className="poem-line">An evening where stories quietly begin.</p>
-            </div>
+            <img src={letterImg} className="entry-bg-img" alt="" aria-hidden="true" />
+            <HandwritingText />
             <button className="enter-button" onClick={handleEnter}>
                 Enter
             </button>

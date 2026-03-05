@@ -1,69 +1,27 @@
 /* Entry Page */
 .entry-page {
     position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../assets/letter.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Poem lines — absolutely positioned between the two decorative lines */
-.poem-lines {
-    position: absolute;
-    top: 36%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
     width: 100%;
-    padding: 0 2rem;
-    pointer-events: none;
+    /* Mobile: fixed viewport height */
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
 }
 
-/* Handwriting text — reveal left-to-right */
-.poem-line {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.2rem;
-    color: #5c4135;
-    margin: 0.6rem 0;
-    line-height: 1.2;
-    letter-spacing: 0.01em;
-    clip-path: inset(0 100% 0 0);
-    animation: write-line linear forwards;
-    animation-fill-mode: both;
+/* Mobile: cover the viewport */
+.entry-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
 }
 
-/* Line 1: "A midsummer gathering." */
-.poem-lines p:nth-of-type(1) {
-    animation-delay: 0.8s;
-    animation-duration: 1.5s;
-}
 
-/* Line 2: "A castle by the lake." */
-.poem-lines p:nth-of-type(2) {
-    animation-delay: 2.6s;
-    animation-duration: 1.4s;
-}
 
-/* Line 3: "An evening where stories quietly begin." */
-.poem-lines p:nth-of-type(3) {
-    animation-delay: 4.3s;
-    animation-duration: 2.6s;
-}
-
-@keyframes write-line {
-    from {
-        clip-path: inset(0 100% 0 0);
-    }
-
-    to {
-        clip-path: inset(0 0% 0 0);
-    }
-}
-
-/* Enter button — stays at flex center (unchanged) */
+/* Enter button */
 .enter-button {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
@@ -75,7 +33,7 @@
     letter-spacing: 0.1em;
     opacity: 0;
     animation: fade-in-entry 1.2s ease forwards;
-    animation-delay: 7.8s;
+    animation-delay: 9.1s;
     animation-fill-mode: both;
     transition: opacity 0.2s ease;
     position: absolute;
@@ -99,12 +57,24 @@
 }
 
 @media (min-width: 768px) {
-    .poem-line {
-        font-size: 2rem;
-    }
-
     .enter-button {
         font-size: 2.5rem;
     }
+}
 
+
+/* Desktop: show full image from top */
+@media (min-width: 768px) {
+    .entry-page {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .entry-bg-img {
+        position: static;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 }
