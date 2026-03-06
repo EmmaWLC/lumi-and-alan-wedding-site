@@ -34,7 +34,7 @@
     letter-spacing: 0.1em;
     opacity: 0;
     animation: fade-in-entry 1.2s ease forwards;
-    animation-delay: 9.1s;
+    animation-delay: 5.2s;
     animation-fill-mode: both;
     transition: opacity 0.2s ease;
     position: absolute;

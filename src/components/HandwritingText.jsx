@@ -9,7 +9,7 @@ const LINES = [
 const FONT_SIZE = 48;
 const LINE_SPACING = FONT_SIZE * 1.6;
 const SVG_WIDTH = 900;
-const CHARS_PER_SEC = 12;
+const CHARS_PER_SEC = 24;
 const START_DELAY = 0.5;
 
 function HandwritingText() {
