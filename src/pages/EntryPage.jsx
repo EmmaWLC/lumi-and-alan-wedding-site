@@ -12,12 +12,10 @@ function EntryPage() {
     };
 
     return (
-        <div className="entry-page">
+        <div className="entry-page" onClick={handleEnter}>
             <img src={letterImg} className="entry-bg-img" alt="" aria-hidden="true" />
             <HandwritingText />
-            <button className="enter-button" onClick={handleEnter}>
-                Enter
-            </button>
+            <span className="enter-button">Enter</span>
         </div>
     );
 }

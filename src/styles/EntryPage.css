@@ -6,6 +6,7 @@
     height: 100vh;
     height: 100dvh;
     overflow: hidden;
+    cursor: pointer;
 }
 
 /* Mobile: cover the viewport */
