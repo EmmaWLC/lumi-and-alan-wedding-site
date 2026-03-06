@@ -63,18 +63,19 @@
 }
 
 .invitation-main {
-    font-family: 'Times New Roman', serif;
-    font-size: 1.1rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
     color: #333;
     margin: 0 0 36px;
     line-height: 120%;
 }
 
-.invitation-deadline {
-    font-family: 'Times New Roman', serif;
-    font-size: 0.95rem;
-    color: #555;
+.invitation-main-local {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    color: #333;
     margin: 0;
+    line-height: 120%;
 }
 
 .book-a-room {
@@ -223,7 +224,7 @@ label[for="dietary"] {
     padding: 10px 16px;
     border: 1px solid #44423E;
     background: #EEEEEB;
-    font-family: 'Times New Roman', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 0.95rem;
     color: #333;
     border-radius: 10px;

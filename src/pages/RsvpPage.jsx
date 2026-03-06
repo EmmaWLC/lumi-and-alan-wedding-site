@@ -4,20 +4,20 @@ import { getGuestById } from '../data/guests';
 import castleImg from "@/assets/castle.webp";
 import dressCode from "@/assets/dress-code.jpg";
 import cardBack from "@/assets/card-back.jpg";
-import group1 from "@/assets/Group-1.png";
-import group2 from "@/assets/Group-2.png";
-import group3 from "@/assets/Group-3.png";
-import group4 from "@/assets/Group-4.png";
-import group5 from "@/assets/Group-5.png";
-import group6 from "@/assets/Group-6.png";
-import group7 from "@/assets/Group-7.png";
-import group8 from "@/assets/Group-8.png";
+import table1 from "@/assets/table-1.jpg";
+import table2 from "@/assets/table-2.jpg";
+import table3 from "@/assets/table-3.jpg";
+import table4 from "@/assets/table-4.jpg";
+import table5 from "@/assets/table-5.jpg";
+import table6 from "@/assets/table-6.jpg";
+import table7 from "@/assets/table-7.jpg";
+import table8 from "@/assets/table-8.jpg";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FadeIn from '../components/FadeIn';
 import '../styles/RsvpPage.css';
 
-const groupPhotos = { 1: group1, 2: group2, 3: group3, 4: group4, 5: group5, 6: group6, 7: group7, 8: group8 };
+const tablePhotos = { 1: table1, 2: table2, 3: table3, 4: table4, 5: table5, 6: table6, 7: table7, 8: table8 };
 
 function RsvpPage() {
     const [searchParams] = useSearchParams();
@@ -73,16 +73,16 @@ function RsvpPage() {
             <FadeIn>
                 <section className="rsvp-invitation">
                     {isLocal ? (
-                        <p className="invitation-main">We would be honored by your presence.<br /><br />
+                        <p className="invitation-main-local">We would be honored by your presence.<br /><br />
                             Please RSVP by March 20, 2026.</p>
                     ) : (
-                        <p className="invitation-main">We would be honored by your presence.<br /><br />
+                        <><p className="invitation-main">We would be honored by your presence.<br /><br />
                             Please RSVP by March 20, 2026.<br /><br />
                             For guests traveling from afar, a room block is reserved at Marriott Tacoma Downtown.<br /><br />
-                            To ensure availability, we kindly recommend booking your accommodations by the end of March.<br /></p>
+                            To ensure availability, we kindly recommend booking your accommodations by the end of March.<br /></p><a href="https://app.marriott.com/reslink?id=1772215904964&key=GRP&app=resvlink" className="book-a-room" target="_blank" rel="noopener noreferrer">BOOK A ROOM</a></>
                     )}
 
-                    <Link to="/rsvp-form" className="book-a-room">BOOK A ROOM</Link>
+
                 </section>
             </FadeIn>
 
@@ -142,7 +142,7 @@ function RsvpPage() {
                         <div className="rsvp-success">
                             <h3>Thank you for your response!</h3>
                             <p>We look forward to celebrating with you.</p>
-                            {guest?.table && groupPhotos[guest.table] && (
+                            {guest?.table && tablePhotos[guest.table] && (
                                 <div className="card-magic-wrapper">
                                     {[...Array(10)].map((_, i) => (
                                         <div key={i} className={`sparkle sparkle-${i + 1}`} />
@@ -153,7 +153,7 @@ function RsvpPage() {
                                                 <img src={cardBack} alt="Card back" />
                                             </div>
                                             <div className="card-flip-front">
-                                                <img src={groupPhotos[guest.table]} alt={`Table ${guest.table} group`} />
+                                                <img src={tablePhotos[guest.table]} alt={`Table ${guest.table} group`} />
                                             </div>
                                         </div>
                                     </div>
