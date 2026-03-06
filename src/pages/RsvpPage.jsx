@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { getGuestById } from '../data/guests';
 import castleImg from "@/assets/castle.webp";
 import dressCode from "@/assets/dress-code.jpg";
@@ -28,7 +28,8 @@ function RsvpPage() {
     const [formData, setFormData] = useState({
         name: '',
         attending: '',
-        dietary: ''
+        dietary: '',
+        shuttle: '',
     });
 
     const [submitted, setSubmitted] = useState(false);
@@ -211,6 +212,33 @@ function RsvpPage() {
                                     onChange={handleChange}
                                     placeholder="Any allergies or dietary restrictions?"
                                 />
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="shuttle">Will you be taking the shuttle between the hotel and the venue? *</label>
+                                <div className="radio-group">
+                                    <label className="radio-label">
+                                        <input
+                                            type="radio"
+                                            name="shuttle"
+                                            value="yes"
+                                            checked={formData.shuttle === 'yes'}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                        <span className='form-yes'>Yes, I will take the shuttle</span>
+                                    </label>
+                                    <label className="radio-label">
+                                        <input
+                                            type="radio"
+                                            name="shuttle"
+                                            value="no"
+                                            checked={formData.shuttle === 'no'}
+                                            onChange={handleChange}
+                                        />
+                                        <span className='form-no'>No, I will arrange my own transportation</span>
+                                    </label>
+                                </div>
                             </div>
 
                             <button type="submit" className="submit-btn">SUBMIT</button>

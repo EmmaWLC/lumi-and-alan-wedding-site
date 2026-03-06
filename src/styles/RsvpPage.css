@@ -213,8 +213,9 @@
 }
 
 label[for="name"],
-label[for="attending"],
-label[for="dietary"] {
+label[for="shuttle"],
+label[for="dietary"],
+label[for="shuttle"] {
     margin-bottom: 20px;
 }
 
