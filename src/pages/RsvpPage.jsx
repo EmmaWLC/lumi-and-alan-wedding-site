@@ -33,6 +33,7 @@ function RsvpPage() {
     });
 
     const [submitted, setSubmitted] = useState(false);
+    const [revealed, setRevealed] = useState(false);
     const [spinKey, setSpinKey] = useState(0);
 
     const handleChange = (e) => {
@@ -139,7 +140,27 @@ function RsvpPage() {
             {/* RSVP Form */}
             <FadeIn>
                 <section className="rsvp-form-section">
-                    {submitted ? (
+                    {submitted && formData.attending === 'no' ? (
+                        <div className="rsvp-declined">
+                            <p className="rsvp-thank-you">Thank you for submitting the form.</p>
+                        </div>
+                    ) : submitted && !revealed ? (
+                        <div className="rsvp-card-reveal" onClick={() => setRevealed(true)}>
+                            <p className="reveal-prompt" >Tap the card to reveal your team</p>
+                            {guest?.table && tablePhotos[guest.table] && (
+                                <div className="card-magic-wrapper">
+                                    <div className="card-flip-container card-static">
+                                        <div className="card-flip-inner card-no-animation">
+                                            <div className="card-flip-back">
+                                                <img src={cardBack} alt="Card back" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                        </div>
+                    ) : submitted && revealed ? (
                         <div className="rsvp-success">
                             <p className="guest-name">{guest?.name},</p><br />
                             <p className="rsvp-thank-you">Your reply has been sealed.</p><br />
