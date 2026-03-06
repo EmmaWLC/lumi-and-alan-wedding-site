@@ -199,7 +199,7 @@
 }
 
 .card-title {
-    font-family: 'EB Garamond', 'Times New Roman', serif;
+    font-family: 'EB Garamond', serif;
     font-weight: 500 !important;
     color: white;
     margin: 0;
@@ -276,7 +276,7 @@
 }
 
 .registry-title {
-    font-family: 'EB Garamond', 'Times New Roman', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 24px;
     font-weight: 500;
     display: inline-block;
@@ -288,7 +288,7 @@
 }
 
 .registry-text {
-    font-family: 'EB Garamond', 'Times New Roman', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 15px;
     line-height: 120%;
     margin: 0 0 16px 0;
@@ -297,7 +297,7 @@
 }
 
 .registry-venmo {
-    font-family: 'EB Garamond', 'Times New Roman', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 15px;
     font-weight: bold;
     margin: 0;

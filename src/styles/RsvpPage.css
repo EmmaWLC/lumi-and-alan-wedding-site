@@ -215,6 +215,7 @@
 label[for="name"],
 label[for="shuttle"],
 label[for="dietary"],
+label[for="attending"],
 label[for="shuttle"] {
     margin-bottom: 20px;
 }
@@ -289,11 +290,8 @@ label[for="shuttle"] {
 
 /* Success Message */
 .rsvp-success {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
     text-align: center;
-    padding: 3rem;
 }
 
 .rsvp-success h3 {
@@ -307,18 +305,23 @@ label[for="shuttle"] {
 
 .rsvp-success p {
     font-family: 'EB Garamond', serif;
-    font-size: 14px;
-    letter-spacing: -1%;
+    font-size: 18px;
+    letter-spacing: 0%;
     line-height: 120%;
-    color: #4d4d4d;
-    font-style: italic;
-    margin-top: 8px;
+    color: black;
+}
+
+.guest-name {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
 }
 
 .card-flip-container {
     perspective: 800px;
-    width: 240px;
-    height: 336px;
+    width: 100%;
+    height: 478.5px;
     cursor: pointer;
     animation: card-drop-in 0.5s cubic-bezier(0.2, 0.8, 0.4, 1.0) forwards;
 }
@@ -381,8 +384,8 @@ label[for="shuttle"] {
 /* Magic Sparkle Effect */
 .card-magic-wrapper {
     position: relative;
-    width: 240px;
-    margin-top: 48px;
+    width: 100%;
+    margin: 36px auto 0;
 }
 
 .sparkle {
@@ -620,6 +623,4 @@ label[for="shuttle"] {
 
         font-size: 20px;
     }
-
-
 }
