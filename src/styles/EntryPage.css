@@ -34,7 +34,7 @@
     letter-spacing: 0.1em;
     opacity: 0;
     animation: fade-in-entry 1.2s ease forwards;
-    animation-delay: 5.2s;
+    animation-delay: 4.8s;
     animation-fill-mode: both;
     transition: opacity 0.2s ease;
     position: absolute;
@@ -45,6 +45,24 @@
 
 .enter-button:hover {
     opacity: 0.6;
+}
+
+.enter-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
+    color: #5c4135;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 2rem;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    animation: fade-in-entry 1.2s ease forwards;
+    animation-fill-mode: both;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes fade-in-entry {

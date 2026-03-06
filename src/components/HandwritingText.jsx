@@ -63,7 +63,7 @@ function HandwritingText() {
             viewBox={`0 0 ${SVG_WIDTH} ${totalHeight}`}
             style={{
                 position: 'absolute',
-                top: '36%',
+                top: '40%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 width: '90%',
