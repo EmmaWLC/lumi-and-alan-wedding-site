@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useSearchParams } from 'react-router-dom';
-import letterImg from '@/assets/letter.jpg';
+import letterImg from '@/assets/letter-blank.jpg';
 import HandwritingText from '../components/HandwritingText';
 import '../styles/EntryPage.css';
 import { getGuestById } from '../data/guests';
