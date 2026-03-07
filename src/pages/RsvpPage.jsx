@@ -162,7 +162,7 @@ function RsvpPage() {
                         </div>
                     ) : submitted && revealed ? (
                         <div className="rsvp-success">
-                            <p className="guest-name">{guest?.name},</p><br />
+                            <p className="guest-name">{formData.name},</p><br />
                             <p className="rsvp-thank-you">Your reply has been sealed.</p><br />
                             <p>On June 27, you’ll be part of</p><br />
                             <p className="guest-name">Sir Ollie</p><br />
