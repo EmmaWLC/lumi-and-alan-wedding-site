@@ -149,7 +149,7 @@ function RsvpPage() {
             {/* RSVP Form */}
             <FadeIn>
                 <section className="rsvp-form-section">
-                    {submitted && formData.attending === 'no' ? (
+                    {submitted && (formData.attending === 'no' || !guest) ? (
                         <div className="rsvp-declined">
                             <p className="rsvp-thank-you">Thank you for submitting the form.</p>
                         </div>
