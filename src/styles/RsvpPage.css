@@ -666,4 +666,8 @@ label[for="shuttle"] {
 
         font-size: 20px;
     }
+
+    .card-magic-wrapper {
+        width: 40%;
+    }
 }
