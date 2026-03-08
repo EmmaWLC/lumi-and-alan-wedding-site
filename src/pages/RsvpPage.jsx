@@ -174,7 +174,7 @@ function RsvpPage() {
                             <p className="guest-name">{formData.name},</p><br />
                             <p className="rsvp-thank-you">Your reply has been sealed.</p><br />
                             <p>On June 27, you’ll be part of</p><br />
-                            <p className="guest-name">Sir Ollie</p><br />
+                            <p className="guest-name">{guest?.team}</p><br />
                             <p>A quiet little chapter in the evening’s story.</p><br />
                             <p>Nothing to prepare.</p><br />
                             <p>Just arrive curious.</p>
