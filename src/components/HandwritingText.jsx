@@ -19,7 +19,7 @@ function HandwritingText() {
     // Load font and compute SVG path data for each line
     useEffect(() => {
         import('opentype.js').then(({ default: opentype }) => {
-            fetch(`${import.meta.env.BASE_URL}fonts/DancingScript-Regular.ttf`)
+            fetch(`${import.meta.env.BASE_URL}fonts/Italianno-Regular.ttf`)
                 .then(r => r.arrayBuffer())
                 .then(buffer => {
                     const font = opentype.parse(buffer);
