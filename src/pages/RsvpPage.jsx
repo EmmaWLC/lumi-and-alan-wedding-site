@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getGuestById } from '../data/guests';
 import castleImg from "@/assets/castle.webp";
@@ -35,6 +35,15 @@ function RsvpPage() {
     const [submitted, setSubmitted] = useState(false);
     const [revealed, setRevealed] = useState(false);
     const [spinKey, setSpinKey] = useState(0);
+    const revealRef = useRef(null);
+
+    useEffect(() => {
+        if (submitted && !revealed && revealRef.current) {
+            setTimeout(() => {
+                revealRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    }, [submitted, revealed]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -145,7 +154,7 @@ function RsvpPage() {
                             <p className="rsvp-thank-you">Thank you for submitting the form.</p>
                         </div>
                     ) : submitted && !revealed ? (
-                        <div className="rsvp-card-reveal" onClick={() => setRevealed(true)}>
+                        <div className="rsvp-card-reveal" ref={revealRef} onClick={() => setRevealed(true)}>
                             <p className="reveal-prompt" >Tap the card to reveal your team</p>
                             {guest?.table && tablePhotos[guest.table] && (
                                 <div className="card-magic-wrapper">
