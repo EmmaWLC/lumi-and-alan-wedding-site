@@ -11,6 +11,7 @@ function EntryPage() {
     const [searchParams] = useSearchParams();
     const guestId = searchParams.get('guestId');
     const guest = guestId ? getGuestById(guestId) : null;
+    const isGroup = guestId?.startsWith('group-');
 
     const handleEnter = () => {
         navigate(`/main${location.search}`);
@@ -20,7 +21,7 @@ function EntryPage() {
         <div className="entry-page" onClick={handleEnter}>
             <img src={letterImg} className="entry-bg-img" alt="" aria-hidden="true" />
             <HandwritingText />
-            <span className="enter-name">{guest?.name}</span>
+            {!isGroup && guest?.name && <span className="enter-name">{guest.name}</span>}
             <span className="enter-button">Enter</span>
         </div>
     );

@@ -23,7 +23,8 @@ function RsvpPage() {
     const [searchParams] = useSearchParams();
     const guestId = searchParams.get('guestId');
     const guest = guestId ? getGuestById(guestId) : null;
-    const isLocal = guest?.local === 'yes';
+    const isGroup = guestId?.startsWith('group-');
+    const isLocal = isGroup ? false : guest?.local === 'yes';
 
     const [formData, setFormData] = useState({
         name: '',
@@ -149,7 +150,7 @@ function RsvpPage() {
             {/* RSVP Form */}
             <FadeIn>
                 <section className="rsvp-form-section">
-                    {submitted && (formData.attending === 'no' || !guest) ? (
+                    {submitted && (formData.attending === 'no' || (!isGroup && !guest)) ? (
                         <div className="rsvp-declined">
                             <p className="rsvp-thank-you">Thank you for submitting the form.</p>
                         </div>
@@ -171,7 +172,7 @@ function RsvpPage() {
                         </div>
                     ) : submitted && revealed ? (
                         <div className="rsvp-success">
-                            <p className="guest-name">{formData.name},</p><br />
+                            {!isGroup && <><p className="guest-name">{formData.name},</p><br /></>}
                             <p className="rsvp-thank-you">Your reply has been sealed.</p><br />
                             <p>On June 27, you’ll be part of</p><br />
                             <p className="guest-name">{guest?.team}</p><br />

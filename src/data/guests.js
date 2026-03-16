@@ -87,9 +87,22 @@ export const guests = [
     { id: 'guest-073', team: 'Jester Kino', table: 8, local: 'no', name: 'Xi Liu' },
 ];
 
-// 根據 ID 查找賓客
+// 每組（桌）的群組連結
+export const groupLinks = [
+    { id: 'group-1', team: 'Sir Ollie', table: 1, local: 'no', name: 'Group - Sir Ollie' },
+    { id: 'group-2', team: 'Captain Ollie', table: 2, local: 'no', name: 'Group - Captain Ollie' },
+    { id: 'group-3', team: 'Court Bard Ollie', table: 3, local: 'no', name: 'Group - Court Bard Ollie' },
+    { id: 'group-4', team: 'Castle Gardener Ollie', table: 4, local: 'no', name: 'Group - Castle Gardener Ollie' },
+    { id: 'group-5', team: 'Duke Kino', table: 5, local: 'no', name: 'Group - Duke Kino' },
+    { id: 'group-6', team: 'Royal Archivist Kino', table: 6, local: 'no', name: 'Group - Royal Archivist Kino' },
+    { id: 'group-7', team: 'Alchemy Master Kino', table: 7, local: 'no', name: 'Group - Alchemy Master Kino' },
+    { id: 'group-8', team: 'Jester Kino', table: 8, local: 'no', name: 'Group - Jester Kino' },
+];
+
+// 根據 ID 查找賓客（含群組連結）
 export const getGuestById = (guestId) => {
-    return guests.find(guest => guest.id === guestId);
+    return guests.find(guest => guest.id === guestId)
+        || groupLinks.find(group => group.id === guestId);
 };
 
 // 所有賓客 URL 列表（方便你複製分享）
@@ -97,5 +110,13 @@ export const getAllGuestUrls = (baseUrl = '') => {
     return guests.map(guest => ({
         name: guest.name,
         url: `${baseUrl}/?guestId=${guest.id}`
+    }));
+};
+
+// 所有群組 URL 列表
+export const getAllGroupUrls = (baseUrl = '') => {
+    return groupLinks.map(group => ({
+        name: group.name,
+        url: `${baseUrl}/?guestId=${group.id}`
     }));
 };

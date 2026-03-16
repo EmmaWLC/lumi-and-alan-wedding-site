@@ -1,9 +1,10 @@
-import { guests, getAllGuestUrls } from '../data/guests';
+import { guests, getAllGuestUrls, groupLinks, getAllGroupUrls } from '../data/guests';
 import { useState } from 'react';
 
 function AdminPage() {
     const [baseUrl, setBaseUrl] = useState('https://EmmaWLC.github.io/lumi-and-alan-wedding-site');
     const guestUrls = getAllGuestUrls(baseUrl);
+    const groupUrls = getAllGroupUrls(baseUrl);
 
     const copyAllUrls = () => {
         const text = guestUrls.map(g => `${g.name}: ${g.url}`).join('\n');
@@ -39,6 +40,31 @@ function AdminPage() {
                     📋 複製所有連結
                 </button>
 
+                <h2>群組連結</h2>
+                <table className="guest-table">
+                    <thead>
+                        <tr>
+                            <th>組別</th>
+                            <th>桌號</th>
+                            <th>專屬連結</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {groupUrls.map((group, index) => (
+                            <tr key={groupLinks[index].id}>
+                                <td>{group.name}</td>
+                                <td>{groupLinks[index].table}</td>
+                                <td className="url-cell">{group.url}</td>
+                                <td>
+                                    <button onClick={() => copyUrl(group.url)}>複製</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+
+                <h2>個人連結</h2>
                 <table className="guest-table">
                     <thead>
                         <tr>
