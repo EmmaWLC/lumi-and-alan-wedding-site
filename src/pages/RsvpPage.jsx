@@ -85,11 +85,9 @@ function RsvpPage() {
             <FadeIn>
                 <section className="rsvp-invitation">
                     {isLocal ? (
-                        <p className="invitation-main-local">We would be honored by your presence.<br /><br />
-                            Please RSVP by March 20, 2026.</p>
+                        <p className="invitation-main-local">We would be honored by your presence.<br /><br /></p>
                     ) : (
                         <><p className="invitation-main">We would be honored by your presence.<br /><br />
-                            Please RSVP by March 20, 2026.<br /><br />
                             For guests traveling from afar, a room block is reserved at Marriott Tacoma Downtown.<br /><br />
                             To ensure availability, we kindly recommend booking your accommodations by the end of March.<br /></p><a href="https://app.marriott.com/reslink?id=1772215904964&key=GRP&app=resvlink" className="book-a-room" target="_blank" rel="noopener noreferrer">BOOK A ROOM</a></>
                     )}
